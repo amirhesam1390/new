@@ -21038,7 +21038,8 @@ public class ChatActivity extends BaseFragment implements NotificationCenter.Not
     private void applyFullRichMessageLocally(ChatMessageCell cell, MessageObject messageObject, TL_iv.RichMessage richMessage) {
         if (messageObject == null || messageObject.messageOwner == null || richMessage == null) return;
         messageObject.messageOwner.rich_message = richMessage;
-        messageObject.richLayout = null;
+        // [classic] #135: swap the preview for a complete layout before rebind.
+        messageObject.generateLayout(null);
         if (chatMessageCellDelegate != null && cell != null) {
             chatMessageCellDelegate.forceUpdate(cell, true);
         }
