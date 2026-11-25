@@ -3178,6 +3178,8 @@ public class DialogCell extends BaseCell implements StoriesListPlaceProvider.Ava
             avatarImage.setRoundRadius(dp(28));
             drawUnmute = false;
         } else {
+            // [classic] #127: hide only the displayed count, not the synced unread count.
+            final boolean hideMessageReactions = MessagesController.getGlobalMainSettings().getBoolean("hideMessageReactions", false);
             int oldUnreadCount = unreadCount;
             boolean oldHasReactionsMentions = reactionMentionCount != 0;
             boolean oldHasPollVotesMentions = pollVotesMentionCount != 0;
@@ -3201,7 +3203,7 @@ public class DialogCell extends BaseCell implements StoriesListPlaceProvider.Ava
                             int[] counts = MessagesController.getInstance(currentAccount).getTopicsController().getForumUnreadCount(localChat.id);
                             unreadCount = counts[0];
                             mentionCount = counts[1];
-                            reactionMentionCount = counts[2];
+                            reactionMentionCount = hideMessageReactions ? 0 : counts[2];
                             hasUnmutedTopics = counts[3] != 0;
                             pollVotesMentionCount = counts[4];
                         } else if (dialog instanceof TLRPC.TL_dialogFolder) {
@@ -3213,13 +3215,13 @@ public class DialogCell extends BaseCell implements StoriesListPlaceProvider.Ava
                             MessagesController.UnreadCounts unreadCounts = MessagesController.getInstance(currentAccount).getCommunityUnreadCount(-dialog.id);
                             unreadCount = unreadCounts.unreadCount;
                             mentionCount = unreadCounts.mentionCount;
-                            reactionMentionCount = unreadCounts.reactionMentionCount;
+                            reactionMentionCount = hideMessageReactions ? 0 : unreadCounts.reactionMentionCount;
                             pollVotesMentionCount = unreadCounts.pollVotesMentionCount;
                             hasUnmutedCommunityDialogs = unreadCounts.hasUnmutedUnreadDialogs;
                         } else {
                             unreadCount = dialog.unread_count;
                             mentionCount = dialog.unread_mentions_count;
-                            reactionMentionCount = dialog.unread_reactions_count;
+                            reactionMentionCount = hideMessageReactions ? 0 : dialog.unread_reactions_count;
                             pollVotesMentionCount = dialog.unread_poll_votes_count;
                         }
                         if (ChatObject.isMonoForum(localChat)) {
@@ -3254,7 +3256,7 @@ public class DialogCell extends BaseCell implements StoriesListPlaceProvider.Ava
             if (forumTopic != null) {
                 unreadCount = forumTopic.unread_count;
                 mentionCount = forumTopic.unread_mentions_count;
-                reactionMentionCount = forumTopic.unread_reactions_count;
+                reactionMentionCount = hideMessageReactions ? 0 : forumTopic.unread_reactions_count;
                 pollVotesMentionCount = forumTopic.unread_poll_votes_count;
             }
             if (dialogsType == DialogsActivity.DIALOGS_TYPE_ADD_USERS_TO) {
@@ -3405,6 +3407,9 @@ public class DialogCell extends BaseCell implements StoriesListPlaceProvider.Ava
                         }
                         if (ChatObject.isMonoForum(localChat)) {
                             newMentionCount = 0;
+                        }
+                        if (hideMessageReactions) {
+                            newReactionCout = 0;
                         }
                         if (dialog != null && (unreadCount != newCount || markUnread != dialog.unread_mark || mentionCount != newMentionCount || reactionMentionCount != newReactionCout)) {
                             unreadCount = newCount;

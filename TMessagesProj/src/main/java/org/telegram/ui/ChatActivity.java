@@ -11319,7 +11319,9 @@ public class ChatActivity extends BaseFragment implements NotificationCenter.Not
         if (reactionsMentiondownButtonCounter == null || getParentActivity() == null) {
             return;
         }
-        boolean visible = reactionsMentionCount > 0 && (chatMode == 0 || chatMode == MODE_SUGGESTIONS);
+        // [classic] #127: the jump button follows the bubble visibility preference, not the read state.
+        final boolean hideMessageReactions = MessagesController.getGlobalMainSettings().getBoolean("hideMessageReactions", false);
+        boolean visible = !hideMessageReactions && reactionsMentionCount > 0 && (chatMode == 0 || chatMode == MODE_SUGGESTIONS);
         reactionsMentiondownButtonCounter.setCount(reactionsMentionCount, animated);
         if (visible && reactionsMentiondownButton.getTag() == null) {
             reactionsMentiondownButton.setTag(1);
@@ -30857,6 +30859,7 @@ public class ChatActivity extends BaseFragment implements NotificationCenter.Not
     @Override
     public void onResume() {
         super.onResume();
+        updateReactionsMentionButton(false); // [classic] #127: refresh after changing the display preference.
         checkShowBlur(false);
         activityResumeTime = System.currentTimeMillis();
         if (openImport && getSendMessagesHelper().getImportingHistory(dialog_id) != null) {
