@@ -2371,6 +2371,10 @@ public class DialogsActivity extends BaseFragment implements NotificationCenter.
                     } else {
                         updatePullState();
                     }
+                } else {
+                    // [classic] #124: the archive can disappear while the menu is open.
+                    // Without a row to scroll, there is no idle callback to update this page.
+                    updatePullState();
                 }
                 undoView.showWithAction(0, UndoView.ACTION_ARCHIVE_HIDDEN, null, null);
             } else {
