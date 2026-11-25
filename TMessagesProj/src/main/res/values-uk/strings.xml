@@ -117,7 +117,7 @@
     <string name="VideoSubtitlesUnavailable">Завантажте відео, щоб створити субтитри</string>
     <string name="DropScreenshotCaptionInfo">Прибирати підпис, коли знімок екрана надсилається з іншого застосунку.</string>
     <string name="HideInAppHintsInfo">Приховувати промо-банери у списку чатів і підказку про день народження в чатах.</string>
-    <string name="HideBottomButtonInfo">Очищати нижню кнопку (Вимкнути звук, Приєднатися) та ігнорувати натискання на неї.</string>
+    <string name="HideBottomButtonInfo">Прибрати всю панель дій замість поля введення, зокрема кнопки «Приєднатися» й «Увімкнути звук». Поле введення не зміниться.</string>
     <string name="OpenArchiveOnPullInfo">Відкривати теку «Архів» під час потягування списку чатів униз.</string>
     <string name="HideStoriesInArchiveInfo">Приховувати стрічку історій усередині архіву чатів.</string>
     <string name="DisableThumbsInDialogListInfo">Приховувати мініатюри медіа останнього повідомлення у списку чатів.</string>
@@ -200,7 +200,7 @@
     <string name="SystemCamera">Використовувати системну камеру для фото</string>
     <string name="SystemCameraInfo">Тільки в діалозі прикріплень</string>
     <string name="MentionByName">Згадати користувача за іменем</string>
-    <string name="HideBottomButton">Сховати нижню кнопку</string>
+    <string name="HideBottomButton">Приховати нижню панель дій</string>
     <string name="OpenArchiveOnPull">Відкрити архів при прокручуванні вниз</string>
     <string name="StickerSize">Розмір стікера</string>
     <string name="DisableFlipPhotos">Вимкнути переворот фото при натисканні</string>

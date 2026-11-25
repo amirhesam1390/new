@@ -117,7 +117,7 @@
     <string name="VideoSubtitlesUnavailable">Scarica il video per generare i sottotitoli</string>
     <string name="DropScreenshotCaptionInfo">Rimuovere la didascalia quando uno screenshot viene condiviso da un\'altra app.</string>
     <string name="HideInAppHintsInfo">Nascondere i banner promozionali nella lista chat e il suggerimento di compleanno nelle chat.</string>
-    <string name="HideBottomButtonInfo">Svuotare il pulsante della barra inferiore (Silenzia, Unisciti) e ignorare i tocchi.</string>
+    <string name="HideBottomButtonInfo">Nasconde tutta la barra delle azioni mostrata al posto del campo messaggio, inclusi Unisciti e Riattiva notifiche. Il campo messaggio non cambia.</string>
     <string name="OpenArchiveOnPullInfo">Aprire la cartella Archiviate quando la lista chat viene trascinata verso il basso.</string>
     <string name="HideStoriesInArchiveInfo">Nascondere la riga delle storie nelle chat archiviate.</string>
     <string name="DisableThumbsInDialogListInfo">Nascondere le miniature dei media dell\'ultimo messaggio nella lista chat.</string>
@@ -200,7 +200,7 @@
     <string name="SystemCamera">Usa la fotocamera di sistema per le foto</string>
     <string name="SystemCameraInfo">Solo nel dialogo degli allegati</string>
     <string name="MentionByName">Menziona utente per nome</string>
-    <string name="HideBottomButton">Nascondi il pulsante in basso</string>
+    <string name="HideBottomButton">Nascondi le azioni inferiori della chat</string>
     <string name="OpenArchiveOnPull">Apri l\'archivio tirando verso il basso</string>
     <string name="StickerSize">Dimensione dello sticker</string>
     <string name="DisableFlipPhotos">Disabilita il capovolgimento delle foto toccando</string>

@@ -578,10 +578,9 @@ public class ForkSettingsActivity extends BaseFragment {
             .setChecked(pref(Theme.CLASSIC_BLUE_HEADER_PREF, false)).setMultiline(true));
         items.add(UItem.asButtonCheck(ID_HIDE_IN_APP_HINTS, LocaleController.getString(R.string.HideInAppHints), LocaleController.getString(R.string.HideInAppHintsInfo))
             .setChecked(pref("hideInAppHints", false)).setMultiline(true));
-        if (SharedConfig.isUserOwner()) {
-            items.add(UItem.asButtonCheck(ID_HIDE_BOTTOM_BUTTON, LocaleController.getString(R.string.HideBottomButton), LocaleController.getString(R.string.HideBottomButtonInfo))
-                .setChecked(pref("hideBottomButton", false)).setMultiline(true));
-        }
+        // [classic] #131: the bottom action area preference is available to every user.
+        items.add(UItem.asButtonCheck(ID_HIDE_BOTTOM_BUTTON, LocaleController.getString(R.string.HideBottomButton), LocaleController.getString(R.string.HideBottomButtonInfo))
+            .setChecked(pref("hideBottomButton", false)).setMultiline(true));
         // [classic] #61: "Show bottom tabs" — moved here from the top-right overflow menu.
         items.add(UItem.asButtonCheck(ID_SHOW_BOTTOM_TABS, LocaleController.getString(R.string.ShowBottomTabs),
                 "Show the floating tab bar (Chats, Contacts, Settings, Profile) at the bottom of the chat list. When off, use the side menu instead.")

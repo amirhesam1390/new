@@ -117,7 +117,7 @@
     <string name="VideoSubtitlesUnavailable">Baixe o vídeo para gerar legendas</string>
     <string name="DropScreenshotCaptionInfo">Remover a legenda quando uma captura de tela é compartilhada de outro aplicativo.</string>
     <string name="HideInAppHintsInfo">Ocultar banners promocionais na lista de conversas e a dica de aniversário nas conversas.</string>
-    <string name="HideBottomButtonInfo">Esvaziar o botão da barra inferior (Silenciar, Entrar) e ignorar toques nele.</string>
+    <string name="HideBottomButtonInfo">Oculta toda a barra de ações que aparece no lugar do campo de mensagem, incluindo Entrar e Ativar som. O campo de mensagem não muda.</string>
     <string name="OpenArchiveOnPullInfo">Abrir a pasta Arquivadas ao puxar a lista de conversas para baixo.</string>
     <string name="HideStoriesInArchiveInfo">Ocultar a linha de stories dentro das conversas arquivadas.</string>
     <string name="DisableThumbsInDialogListInfo">Ocultar as miniaturas de mídia da última mensagem na lista de conversas.</string>
@@ -200,7 +200,7 @@
     <string name="SystemCamera">Usar câmera do sistema para fotos</string>
     <string name="SystemCameraInfo">Apenas no diálogo de anexos</string>
     <string name="MentionByName">Mencionar usuário pelo nome</string>
-    <string name="HideBottomButton">Ocultar botão inferior</string>
+    <string name="HideBottomButton">Ocultar ações inferiores da conversa</string>
     <string name="OpenArchiveOnPull">Abrir arquivo ao puxar para baixo</string>
     <string name="StickerSize">Tamanho do Sticker</string>
     <string name="DisableFlipPhotos">Desativar passar fotos ao tocar</string>

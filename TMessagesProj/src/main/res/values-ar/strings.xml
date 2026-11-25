@@ -117,7 +117,7 @@
     <string name="VideoSubtitlesUnavailable">نزّل الفيديو لإنشاء الترجمات</string>
     <string name="DropScreenshotCaptionInfo">إزالة التسمية التوضيحية عند مشاركة لقطة شاشة من تطبيق آخر.</string>
     <string name="HideInAppHintsInfo">إخفاء لافتات العروض في قائمة الدردشات وتلميح عيد الميلاد داخل الدردشات.</string>
-    <string name="HideBottomButtonInfo">تفريغ زر الشريط السفلي (كتم، انضمام) وتجاهل النقر عليه.</string>
+    <string name="HideBottomButtonInfo">أخفِ شريط الإجراءات الذي يظهر بدل حقل الرسالة بالكامل، بما في ذلك الانضمام وإلغاء الكتم. لا يتغير حقل الرسالة.</string>
     <string name="OpenArchiveOnPullInfo">فتح مجلد الأرشيف عند سحب قائمة الدردشات للأسفل.</string>
     <string name="HideStoriesInArchiveInfo">إخفاء صف القصص داخل الدردشات المؤرشفة.</string>
     <string name="DisableThumbsInDialogListInfo">إخفاء الصور المصغرة لآخر رسالة في قائمة الدردشات.</string>
@@ -200,7 +200,7 @@
     <string name="SystemCamera">استخدام الكاميرا النظامية للصورة</string>
     <string name="SystemCameraInfo">فقط في حوار المرفقات</string>
     <string name="MentionByName">ذكر المستخدم بالاسم</string>
-    <string name="HideBottomButton">إخفاء الزر السفلي</string>
+    <string name="HideBottomButton">إخفاء إجراءات الدردشة السفلية</string>
     <string name="OpenArchiveOnPull">فتح الأرشيف عند السحب للأسفل</string>
     <string name="StickerSize">حجم الملصق</string>
     <string name="DisableFlipPhotos">تعطيل قلب الصور عند النقر</string>
