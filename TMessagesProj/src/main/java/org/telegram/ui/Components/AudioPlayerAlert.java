@@ -206,6 +206,11 @@ public class AudioPlayerAlert extends BottomSheet implements NotificationCenter.
         return savedMusicList != null && savedMusicList.dialogId == UserConfig.getInstance(currentAccount).getClientUserId();
     }
 
+    // [classic] #120: owning a profile playlist still permits removal of a protected track.
+    private int getPlayerPanelHeightDp() {
+        return 179 + (!noforwards || isMyList() ? 52 : 0);
+    }
+
     private ArrayList<MessageObject> playlist;
     private MessageObject lastMessageObject;
     private boolean noforwards;
@@ -347,7 +352,7 @@ public class AudioPlayerAlert extends BottomSheet implements NotificationCenter.
                 layoutParams = (LayoutParams) blurredView.getLayoutParams();
                 layoutParams.topMargin = -getPaddingTop();
 
-                int contentSize = dp(179 + (!noforwards ? 52 : 0));
+                int contentSize = dp(getPlayerPanelHeightDp());
                 if (playlist.size() > 1) {
                     contentSize += backgroundPaddingTop + playlist.size() * dp(56);
                 }
@@ -356,8 +361,8 @@ public class AudioPlayerAlert extends BottomSheet implements NotificationCenter.
                     padding = dp(8);
                 } else {
                     padding = (contentSize < availableHeight ? availableHeight - contentSize : availableHeight - (int) (availableHeight / 5 * 3.5f)) + dp(8);
-                    if (padding > availableHeight - dp(179 + (!noforwards ? 52 : 0) + 150)) {
-                        padding = availableHeight - dp(179 + (!noforwards ? 52 : 0) + 150);
+                    if (padding > availableHeight - dp(getPlayerPanelHeightDp() + 150)) {
+                        padding = availableHeight - dp(getPlayerPanelHeightDp() + 150);
                     }
                     if (padding < 0) {
                         padding = 0;
@@ -391,7 +396,7 @@ public class AudioPlayerAlert extends BottomSheet implements NotificationCenter.
                     if (listAdapter.getItemCount() > 0) {
                         dismiss = ev.getY() < scrollOffsetY + dp(12);
                     } else {
-                        dismiss = ev.getY() < getMeasuredHeight() - dp(179 + (!noforwards ? 52 : 0) + 12);
+                        dismiss = ev.getY() < getMeasuredHeight() - dp(getPlayerPanelHeightDp() + 12);
                     }
                     if (dismiss) {
                         dismiss();
@@ -1518,12 +1523,12 @@ public class AudioPlayerAlert extends BottomSheet implements NotificationCenter.
             itemTouchHelper.attachToRecyclerView(listView);
         }
 
-        containerView.addView(playerLayout, LayoutHelper.createFrame(LayoutHelper.MATCH_PARENT, 179 + (!noforwards ? 52 : 0), Gravity.LEFT | Gravity.BOTTOM));
+        containerView.addView(playerLayout, LayoutHelper.createFrame(LayoutHelper.MATCH_PARENT, getPlayerPanelHeightDp(), Gravity.LEFT | Gravity.BOTTOM));
         containerView.addView(playerShadow, new FrameLayout.LayoutParams(LayoutHelper.MATCH_PARENT, AndroidUtilities.getShadowHeight(), Gravity.LEFT | Gravity.BOTTOM));
         FrameLayout.LayoutParams layoutParams = (FrameLayout.LayoutParams) playerLayout.getLayoutParams();
-        layoutParams.height = dp(179 + (!noforwards ? 52 : 0));
+        layoutParams.height = dp(getPlayerPanelHeightDp());
         layoutParams = (FrameLayout.LayoutParams) playerShadow.getLayoutParams();
-        layoutParams.bottomMargin = dp(179 + (!noforwards ? 52 : 0));
+        layoutParams.bottomMargin = dp(getPlayerPanelHeightDp());
         containerView.addView(actionBarShadow, LayoutHelper.createFrame(LayoutHelper.MATCH_PARENT, 3));
         containerView.addView(actionBar);
 
@@ -2384,16 +2389,16 @@ public class AudioPlayerAlert extends BottomSheet implements NotificationCenter.
                 MessagesController.getInstance(currentAccount).isPeerNoForwards(messageObject.getDialogId()) ||
                 messageObject.messageOwner.noforwards
             );
-            if (noforwards != this.noforwards) {
-                this.noforwards = noforwards;
+            this.noforwards = noforwards;
+            final int panelHeight = dp(getPlayerPanelHeightDp());
+            FrameLayout.LayoutParams playerParams = (FrameLayout.LayoutParams) playerLayout.getLayoutParams();
+            if (playerParams.height != panelHeight) {
+                playerParams.height = panelHeight;
+                playerLayout.setLayoutParams(playerParams);
 
-                FrameLayout.LayoutParams layoutParams = (FrameLayout.LayoutParams) playerLayout.getLayoutParams();
-                layoutParams.height = dp(179 + (!noforwards ? 52 : 0));
-                playerLayout.setLayoutParams(layoutParams);
-
-                layoutParams = (FrameLayout.LayoutParams) playerShadow.getLayoutParams();
-                layoutParams.bottomMargin = dp(179 + (!noforwards ? 52 : 0));
-                playerShadow.setLayoutParams(layoutParams);
+                FrameLayout.LayoutParams shadowParams = (FrameLayout.LayoutParams) playerShadow.getLayoutParams();
+                shadowParams.bottomMargin = panelHeight;
+                playerShadow.setLayoutParams(shadowParams);
             }
             if (noforwards) {
                 optionsButton.hideSubItem(1);
