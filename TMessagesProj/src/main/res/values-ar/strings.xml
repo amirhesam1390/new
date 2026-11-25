@@ -81,6 +81,8 @@
     <string name="WebPublishToken">رمز الرفع</string>
     <string name="UnifiedPush">UnifiedPush</string>
     <string name="ForkSectionAppearance">المظهر</string>
+    <string name="ClassicBlueHeader">شريط العنوان الأزرق الكلاسيكي</string>
+    <string name="ClassicBlueHeaderInfo">استخدم شريط العنوان الأزرق القديم وشريطًا رماديًا في الأرشيف مع سمة Classic ولون التمييز الافتراضي.</string>
     <string name="ForkSectionMedia">الصور والفيديو</string>
     <string name="ForkSectionVoice">الصوت والترجمة</string>
     <string name="ForkSectionBots">البوتات والمتصفح</string>

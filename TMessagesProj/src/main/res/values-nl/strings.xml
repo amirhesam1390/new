@@ -81,6 +81,8 @@
     <string name="WebPublishToken">Uploadtoken</string>
     <string name="UnifiedPush">UnifiedPush</string>
     <string name="ForkSectionAppearance">Weergave</string>
+    <string name="ClassicBlueHeader">Klassieke blauwe kopbalk</string>
+    <string name="ClassicBlueHeaderInfo">Gebruik de oude blauwe kopbalk en een grijze kopbalk in het archief met het thema Classic en de standaardaccentkleur.</string>
     <string name="ForkSectionMedia">Foto\'s en video</string>
     <string name="ForkSectionVoice">Spraak en vertaling</string>
     <string name="ForkSectionBots">Bots en browser</string>

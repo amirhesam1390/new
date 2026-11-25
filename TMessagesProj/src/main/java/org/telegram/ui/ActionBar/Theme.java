@@ -2721,6 +2721,7 @@ public class Theme {
     public static int[] keys_avatar_background2 = {key_avatar_background2Red, key_avatar_background2Orange, key_avatar_background2Violet, key_avatar_background2Green, key_avatar_background2Cyan, key_avatar_background2Blue, key_avatar_background2Pink};
     public static int[] keys_avatar_nameInMessage = {key_avatar_nameInMessageRed, key_avatar_nameInMessageOrange, key_avatar_nameInMessageViolet, key_avatar_nameInMessageGreen, key_avatar_nameInMessageCyan, key_avatar_nameInMessageBlue, key_avatar_nameInMessagePink};
 
+    public static final String CLASSIC_BLUE_HEADER_PREF = "classicBlueHeader"; // [classic] #112
     public static final int key_actionBarDefault = colorsCount++;
     public static final int key_actionBarDefaultSelector = colorsCount++;
     public static final int key_actionBarWhiteSelector = colorsCount++;
@@ -9057,6 +9058,20 @@ public class Theme {
         return getColor(key, isDefault, false);
     }
 
+    // [classic] #112: the stock Blue palette from Telegram 5.15.0, limited to the header.
+    private static int getClassicHeaderColor(int key) {
+        if (key == key_actionBarDefault) return 0xff527da3;
+        if (key == key_actionBarDefaultArchived) return 0xff6f7a87;
+        if (key == key_actionBarDefaultSelector || key == key_actionBarTabSelector) return 0xff406d94;
+        if (key == key_actionBarDefaultArchivedSelector) return 0xff5e6772;
+        if (key == key_actionBarDefaultSubtitle || key == key_actionBarTabUnactiveText) return 0xffd5e8f7;
+        if (key == key_actionBarDefaultSearchPlaceholder || key == key_actionBarDefaultArchivedSearchPlaceholder) return 0x88ffffff;
+        if (key == key_actionBarDefaultIcon || key == key_actionBarDefaultTitle || key == key_actionBarDefaultSearch
+                || key == key_actionBarDefaultArchivedIcon || key == key_actionBarDefaultArchivedTitle || key == key_actionBarDefaultArchivedSearch
+                || key == key_actionBarTabActiveText || key == key_actionBarTabLine || key == key_telegram_color_dialogsLogo) return Color.WHITE;
+        return 0;
+    }
+
     public static int getColor(int key, boolean[] isDefault, boolean ignoreAnimation) {
         if (!ignoreAnimation && animatingColors != null) {
             int index = animatingColors.indexOfKey(key);
@@ -9080,6 +9095,12 @@ public class Theme {
                 useDefault = currentTheme.isDefaultMainAccent();
             }
             if (useDefault) {
+                int classicColor = getClassicHeaderColor(key);
+                if (classicColor != 0 && currentTheme.currentAccentId == DEFALT_THEME_ACCENT_ID
+                        && ApplicationLoader.applicationContext.getSharedPreferences("mainconfig", Context.MODE_PRIVATE)
+                                .getBoolean(CLASSIC_BLUE_HEADER_PREF, false)) {
+                    return classicColor;
+                }
                 if (key == key_chat_serviceBackground) {
                     return serviceMessageColor;
                 } else if (key == key_chat_serviceBackgroundSelected) {

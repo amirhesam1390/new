@@ -81,6 +81,8 @@
     <string name="WebPublishToken">Token de subida</string>
     <string name="UnifiedPush">UnifiedPush</string>
     <string name="ForkSectionAppearance">Apariencia</string>
+    <string name="ClassicBlueHeader">Cabecera azul clásica</string>
+    <string name="ClassicBlueHeaderInfo">Usa la antigua cabecera azul y una gris para el Archivo con el tema Classic y su acento predeterminado.</string>
     <string name="ForkSectionMedia">Fotos y vídeos</string>
     <string name="ForkSectionVoice">Voz y traducción</string>
     <string name="ForkSectionBots">Bots y navegador</string>

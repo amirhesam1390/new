@@ -81,6 +81,8 @@
     <string name="WebPublishToken">Токен завантаження</string>
     <string name="UnifiedPush">UnifiedPush</string>
     <string name="ForkSectionAppearance">Зовнішній вигляд</string>
+    <string name="ClassicBlueHeader">Класична синя шапка</string>
+    <string name="ClassicBlueHeaderInfo">Синя шапка та сіра шапка архіву, як раніше. Діє з темою Classic та її початковим акцентом.</string>
     <string name="ForkSectionMedia">Фото та відео</string>
     <string name="ForkSectionVoice">Голос і переклад</string>
     <string name="ForkSectionBots">Боти та браузер</string>

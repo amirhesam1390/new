@@ -15,6 +15,8 @@
     <string name="WebPublishTemplate">قالب کلیپ‌بورد (%q = لینک)</string>
     <string name="WebPublishToken">توکن آپلود</string>
     <string name="ForkSectionAppearance">ظاهر</string>
+    <string name="ClassicBlueHeader">نوار عنوان آبی کلاسیک</string>
+    <string name="ClassicBlueHeaderInfo">با پوستهٔ Classic و رنگ تأکیدی پیش‌فرض آن، از نوار عنوان آبی قدیمی و نوار عنوان خاکستری در بایگانی استفاده کنید.</string>
     <string name="ForkSectionMedia">عکس و ویدیو</string>
     <string name="ForkSectionVoice">صدا و ترجمه</string>
     <string name="ForkSectionBots">ربات‌ها و مرورگر</string>

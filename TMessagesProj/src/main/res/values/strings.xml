@@ -9,6 +9,8 @@
 
     <!--FORK CLIENT-->
     <string name="ForkSectionAppearance">Appearance</string>
+    <string name="ClassicBlueHeader">Classic blue header</string>
+    <string name="ClassicBlueHeaderInfo">Use the historical blue header and a gray Archive header with the Classic theme and its default accent.</string>
     <string name="ForkSectionMedia">Photos and video</string>
     <string name="ForkSectionVoice">Voice and translation</string>
     <string name="ForkSectionBots">Bots and browser</string>

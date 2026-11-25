@@ -124,6 +124,7 @@ public class ForkSettingsActivity extends BaseFragment {
     // upstream's sequence — 12.10.4 took 39 for ID_LINK_REPLACEMENTS under #118's feet.
     public static final int ID_SHOW_AI_SUMMARY = 900; // [classic] #118
     public static final int ID_HIDE_GIFT_BUTTON = 901; // [classic] #104
+    public static final int ID_CLASSIC_BLUE_HEADER = 902; // [classic] #112
 
     public static final int ID_DISABLE_QUICK_REACTION = 40;
     public static final int ID_HIDE_MESSAGE_REACTIONS = 41;
@@ -573,6 +574,8 @@ public class ForkSettingsActivity extends BaseFragment {
         items.add(UItem.asShadow(null));
 
         items.add(UItem.asHeader(LocaleController.getString(R.string.ForkSectionAppearance)));
+        items.add(UItem.asButtonCheck(ID_CLASSIC_BLUE_HEADER, LocaleController.getString(R.string.ClassicBlueHeader), LocaleController.getString(R.string.ClassicBlueHeaderInfo))
+            .setChecked(pref(Theme.CLASSIC_BLUE_HEADER_PREF, false)).setMultiline(true));
         items.add(UItem.asButtonCheck(ID_HIDE_IN_APP_HINTS, LocaleController.getString(R.string.HideInAppHints), LocaleController.getString(R.string.HideInAppHintsInfo))
             .setChecked(pref("hideInAppHints", false)).setMultiline(true));
         if (SharedConfig.isUserOwner()) {
@@ -838,6 +841,13 @@ public class ForkSettingsActivity extends BaseFragment {
 
         } else if (id == ID_HIDE_IN_APP_HINTS) {
             toggle("hideInAppHints", item, view);
+        } else if (id == ID_CLASSIC_BLUE_HEADER) {
+            toggle(Theme.CLASSIC_BLUE_HEADER_PREF, item, view);
+            Theme.applyDialogsTheme();
+            if (parentLayout != null) {
+                parentLayout.rebuildAllFragmentViews(true, true);
+            }
+            checkSystemBarColors();
         } else if (id == ID_HIDE_BOTTOM_BUTTON) {
             toggle("hideBottomButton", item, view);
         } else if (id == ID_SHOW_BOTTOM_TABS) {

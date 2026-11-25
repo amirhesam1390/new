@@ -81,6 +81,8 @@
     <string name="WebPublishToken">Upload-Token</string>
     <string name="UnifiedPush">UnifiedPush</string>
     <string name="ForkSectionAppearance">Erscheinungsbild</string>
+    <string name="ClassicBlueHeader">Klassische blaue Kopfleiste</string>
+    <string name="ClassicBlueHeaderInfo">Verwendet mit dem Design Classic und dessen Standardakzent die frühere blaue Kopfleiste und eine graue Leiste im Archiv.</string>
     <string name="ForkSectionMedia">Fotos und Videos</string>
     <string name="ForkSectionVoice">Sprache und Übersetzung</string>
     <string name="ForkSectionBots">Bots und Browser</string>

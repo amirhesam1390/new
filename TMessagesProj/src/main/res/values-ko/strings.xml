@@ -81,6 +81,8 @@
     <string name="WebPublishToken">업로드 토큰</string>
     <string name="UnifiedPush">UnifiedPush</string>
     <string name="ForkSectionAppearance">모양</string>
+    <string name="ClassicBlueHeader">클래식 파란색 헤더</string>
+    <string name="ClassicBlueHeaderInfo">Classic 테마와 기본 강조 색상에서 예전의 파란색 헤더와 보관함의 회색 헤더를 사용합니다.</string>
     <string name="ForkSectionMedia">사진 및 동영상</string>
     <string name="ForkSectionVoice">음성 및 번역</string>
     <string name="ForkSectionBots">봇 및 브라우저</string>

@@ -81,6 +81,8 @@
     <string name="WebPublishToken">Token di upload</string>
     <string name="UnifiedPush">UnifiedPush</string>
     <string name="ForkSectionAppearance">Aspetto</string>
+    <string name="ClassicBlueHeader">Intestazione blu classica</string>
+    <string name="ClassicBlueHeaderInfo">Usa la vecchia intestazione blu e un’intestazione grigia nell’Archivio con il tema Classic e il suo accento predefinito.</string>
     <string name="ForkSectionMedia">Foto e video</string>
     <string name="ForkSectionVoice">Voce e traduzione</string>
     <string name="ForkSectionBots">Bot e browser</string>
