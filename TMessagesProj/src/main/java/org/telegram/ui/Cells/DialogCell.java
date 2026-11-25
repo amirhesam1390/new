@@ -6116,7 +6116,7 @@ public class DialogCell extends BaseCell implements StoriesListPlaceProvider.Ava
             int messageHash = message == null ? 0 : message.getId() + message.hashCode();
             Integer printingType = null;
             long readHash = dialog.read_inbox_max_id + ((long) dialog.read_outbox_max_id << 8) + ((long) (dialog.unread_count + (dialog.unread_mark ? -1 : 0)) << 16) +
-                    (dialog.unread_reactions_count > 0 ? (1 << 18) : 0) +
+                    (reactionMentionCount > 0 ? (1 << 18) : 0) + // [classic] #127: invalidate on badge visibility changes
                     (dialog.unread_mentions_count > 0 ? (1 << 19) : 0) +
                     (dialog.unread_poll_votes_count > 0 ? (1 << 21) : 0); // [classic] #95
 
