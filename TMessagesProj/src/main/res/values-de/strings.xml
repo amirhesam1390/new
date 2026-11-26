@@ -66,7 +66,7 @@
     <string name="QRLoginStep3">Richte dein Handy auf diesen Bildschirm, um die Anmeldung zu bestätigen</string>
     <string name="QRLoginSubtitle">Öffne Telegram auf einem anderen Gerät und scanne diesen QR-Code, um dich bei deinem Konto anzumelden.</string>
     <string name="QRLoginTitle">Per QR-Code anmelden</string>
-    <string name="AppNameFdroid">Forkgram</string>
+    <string name="AppNameFdroid">گپیرا</string>
     <string name="GoToTags">GoTo-Chats: %1$s</string>
     <string name="GoToNotFound">Kein GoTo-Chat für #%1$s (%2$s) gefunden</string>
     <string name="GoToAmbiguous">Tag #%1$s passt zu mehreren Chats: %2$s</string>
@@ -172,7 +172,7 @@
     <string name="formatterDay12HSec">h:mm:ss a</string>
     <string name="CopyWithoutProtocol">Ohne Protokoll kopieren</string>
     <!--fork settings view-->
-    <string name="ForkSettingsTitle">Einstellungen von Forkgram Classic</string>
+    <string name="ForkSettingsTitle">Gapira-Einstellungen</string>
     <string name="ForkCheckUpdate">Updates überprüfen</string>
     <string name="SquareAvatars">Quadratische Avatare</string>
     <string name="AvatarShape">Avatar-Form</string>
@@ -269,8 +269,8 @@
     <string name="LinkReplacementInvalid">Ungültiger Ausdruck</string>
     <string name="LinkReplacedOnPaste">Link ersetzt</string>
 
-    <string name="AppName">Forkgram Classic</string>
-    <string name="AppNameBeta">Forkgram Classic</string>
+    <string name="AppName">گپیرا</string>
+    <string name="AppNameBeta">گپیرا</string>
     <string name="LanguageName">Deutsch</string>
     <string name="English">Englisch</string>
     <string name="LanguageNameInEnglish">German</string>
@@ -657,7 +657,7 @@
     <string name="TelegramFAQ">Telegram FAQ</string>
     <string name="TelegramFaq">Telegram FAQ</string>
     <string name="TelegramFeatures">Telegram Funktionen</string>
-    <string name="TelegramFeaturesUrl">https://t.me/TelegramTipsDE</string>
+    <string name="TelegramFeaturesUrl">https://gapira.ir/TelegramTipsDE</string>
     <string name="AddAccount">Konto hinzufügen</string>
     <string name="SelectAccount">Konto auswählen</string>
     <string name="TelegramFaqUrl">https://telegram.org/faq/de</string>

@@ -66,7 +66,7 @@
     <string name="QRLoginStep3">Aponte o celular para esta tela para confirmar o login</string>
     <string name="QRLoginSubtitle">Abra o Telegram em outro dispositivo e escaneie este código QR para entrar na sua conta.</string>
     <string name="QRLoginTitle">Entrar com código QR</string>
-    <string name="AppNameFdroid">Forkgram</string>
+    <string name="AppNameFdroid">گپیرا</string>
     <string name="GoToTags">Chats do GoTo: %1$s</string>
     <string name="GoToNotFound">Nenhum chat do GoTo encontrado para #%1$s (%2$s)</string>
     <string name="GoToAmbiguous">A tag #%1$s corresponde a vários chats: %2$s</string>
@@ -172,7 +172,7 @@
     <string name="formatterDay12HSec">h:mm:ss a</string>
     <string name="CopyWithoutProtocol">Copiar sem protocolo</string>
     <!--fork settings view-->
-    <string name="ForkSettingsTitle">Configurações do Forkgram Classic</string>
+    <string name="ForkSettingsTitle">Configurações do Gapira</string>
     <string name="ForkCheckUpdate">Verificar atualizações</string>
     <string name="SquareAvatars">Avatares quadrados</string>
     <string name="AvatarShape">Forma do avatar</string>
@@ -268,8 +268,8 @@
     <string name="LinkReplacementReplaceWith">Substituir por</string>
     <string name="LinkReplacementInvalid">Expressão inválida</string>
     <string name="LinkReplacedOnPaste">Link substituído</string>
-    <string name="AppName">Forkgram Classic</string>
-    <string name="AppNameBeta">Forkgram Classic</string>
+    <string name="AppName">گپیرا</string>
+    <string name="AppNameBeta">گپیرا</string>
     <string name="LanguageName">Português (Brasil)</string>
     <string name="English">Inglês</string>
     <string name="LanguageNameInEnglish">Portuguese (Brazil)</string>
@@ -693,7 +693,7 @@
     <string name="TelegramFAQ">Perguntas Frequentes</string>
     <string name="TelegramFaq">Perguntas Frequentes</string>
     <string name="TelegramFeatures">Recursos do Telegram</string>
-    <string name="TelegramFeaturesUrl">https://t.me/TelegramTipsBR</string>
+    <string name="TelegramFeaturesUrl">https://gapira.ir/TelegramTipsBR</string>
     <string name="AddAccount">Adicionar&#160;Conta</string>
     <string name="SelectAccount">Selecionar Conta</string>
     <string name="TelegramFaqUrl">https://telegram.org/faq/pt-br</string>

@@ -66,7 +66,7 @@
     <string name="QRLoginStep3">Richt je telefoon op dit scherm om het inloggen te bevestigen</string>
     <string name="QRLoginSubtitle">Open Telegram op een ander apparaat en scan deze QR-code om in te loggen op je account.</string>
     <string name="QRLoginTitle">Inloggen met QR-code</string>
-    <string name="AppNameFdroid">Forkgram</string>
+    <string name="AppNameFdroid">گپیرا</string>
     <string name="GoToTags">GoTo-chats: %1$s</string>
     <string name="GoToNotFound">Geen GoTo-chat gevonden voor #%1$s (%2$s)</string>
     <string name="GoToAmbiguous">Tag #%1$s komt overeen met meerdere chats: %2$s</string>
@@ -172,7 +172,7 @@
     <string name="formatterDay12HSec">h:mm:ss a</string>
     <string name="CopyWithoutProtocol">Kopiëren zonder protocol</string>
     <!--fork settings view-->
-    <string name="ForkSettingsTitle">Instellingen van Forkgram Classic</string>
+    <string name="ForkSettingsTitle">Gapira-instellingen</string>
     <string name="ForkCheckUpdate">Controleer op updates</string>
     <string name="SquareAvatars">Vierkante avatars</string>
     <string name="AvatarShape">Avatarvorm</string>
@@ -269,8 +269,8 @@
     <string name="LinkReplacementInvalid">Ongeldige expressie</string>
     <string name="LinkReplacedOnPaste">Link vervangen</string>
 
-    <string name="AppName">Forkgram Classic</string>
-    <string name="AppNameBeta">Forkgram Classic</string>
+    <string name="AppName">گپیرا</string>
+    <string name="AppNameBeta">گپیرا</string>
     <string name="LanguageName">Nederlands</string>
     <string name="English">Engels</string>
     <string name="LanguageNameInEnglish">Dutch</string>
@@ -712,7 +712,7 @@
     <string name="TelegramFAQ">Veelgestelde vragen</string>
     <string name="TelegramFaq">Veelgestelde vragen</string>
     <string name="TelegramFeatures">Telegram-functies</string>
-    <string name="TelegramFeaturesUrl">https://t.me/TelegramTips</string>
+    <string name="TelegramFeaturesUrl">https://gapira.ir/TelegramTips</string>
     <string name="AddAccount">Account toevoegen</string>
     <string name="SelectAccount">Account kiezen</string>
     <string name="TelegramFaqUrl">https://telegram.org/faq</string>

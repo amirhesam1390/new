@@ -66,7 +66,7 @@
     <string name="QRLoginStep3">وجّه هاتفك نحو هذه الشاشة لتأكيد تسجيل الدخول</string>
     <string name="QRLoginSubtitle">افتح تيليجرام على جهاز آخر وامسح رمز QR هذا لتسجيل الدخول إلى حسابك.</string>
     <string name="QRLoginTitle">تسجيل الدخول عبر رمز QR</string>
-    <string name="AppNameFdroid">Forkgram</string>
+    <string name="AppNameFdroid">گپیرا</string>
     <string name="GoToTags">دردشات GoTo: %1$s</string>
     <string name="GoToNotFound">لم يتم العثور على دردشة GoTo لـ #%1$s (%2$s)</string>
     <string name="GoToAmbiguous">الوسم #%1$s يطابق عدة دردشات: %2$s</string>
@@ -172,7 +172,7 @@
     <string name="formatterDay12HSec">h:mm:ss ص</string>
     <string name="CopyWithoutProtocol">نسخ بدون بروتوكول</string>
     <!--fork settings view-->
-    <string name="ForkSettingsTitle">إعدادات Forkgram Classic</string>
+    <string name="ForkSettingsTitle">إعدادات گپیرا</string>
     <string name="ForkCheckUpdate">تحقق من التحديثات</string>
     <string name="SquareAvatars">أفاتارات مربعة</string>
     <string name="AvatarShape">شكل الصورة الرمزية</string>
@@ -269,8 +269,8 @@
     <string name="LinkReplacementInvalid">تعبير غير صالح</string>
     <string name="LinkReplacedOnPaste">تم استبدال الرابط</string>
 
-    <string name="AppName">Forkgram Classic</string>
-    <string name="AppNameBeta">Forkgram Classic</string>
+    <string name="AppName">گپیرا</string>
+    <string name="AppNameBeta">گپیرا</string>
     <string name="LanguageName">العربية</string>
     <string name="English">الإنجليزية</string>
     <string name="LanguageNameInEnglish">Arabic</string>
@@ -679,7 +679,7 @@
     <string name="TelegramFAQ">الأسئلة الشائعة</string>
     <string name="TelegramFaq">الأسئلة الشائعة</string>
     <string name="TelegramFeatures">ميزات تيليجرام</string>
-    <string name="TelegramFeaturesUrl">https://t.me/TelegramTipsAR/128</string>
+    <string name="TelegramFeaturesUrl">https://gapira.ir/TelegramTipsAR/128</string>
     <string name="AddAccount">إضافة حساب</string>
     <string name="SelectAccount">اختيار حساب</string>
     <string name="TelegramFaqUrl">https://telegram.org/faq/ar</string>

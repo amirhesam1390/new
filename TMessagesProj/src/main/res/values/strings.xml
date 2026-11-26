@@ -81,7 +81,7 @@
     <string name="formatterDay12HSec">h:mm:ss a</string>
     <string name="CopyWithoutProtocol">Copy without protocol</string>
     <!--fork settings view-->
-    <string name="ForkSettingsTitle">Forkgram Classic Settings</string>
+    <string name="ForkSettingsTitle">Gapira Settings</string>
     <string name="ForkCheckUpdate">Check updates</string>
     <string name="InAppCamera">Enable In-App Camera</string>
     <string name="InAppCameraInfo">In Attachments</string>
@@ -194,9 +194,9 @@
     <string name="ForkSettingsLockChangeCode">Change code</string>
     <string name="ForkSettingsLockRemoveCode">Remove code</string>
     <string name="ForkSettingsLockRemoveCodeConfirm">Fork Client Settings will open without a code.</string>
-    <string name="AppName">Forkgram Classic</string>
-    <string name="AppNameBeta">Forkgram Classic</string>
-    <string name="AppNameFdroid">Forkgram Classic</string>
+    <string name="AppName">گپیرا</string>
+    <string name="AppNameBeta">گپیرا</string>
+    <string name="AppNameFdroid">گپیرا</string>
     <string name="GoToTags">GoTo chats: %1$s</string>
     <string name="GoToNotFound">No GoTo chat found for #%1$s (%2$s)</string>
     <string name="GoToAmbiguous">Tag #%1$s matches several chats: %2$s</string>
@@ -1695,7 +1695,7 @@
     <string name="GroupEmptyTitle2">Groups can have:</string>
     <string name="GroupDescription1">Up to 200,000 members</string>
     <string name="GroupDescription2">Persistent chat history</string>
-    <string name="GroupDescription3">Public links such as t.me/title</string>
+    <string name="GroupDescription3">Public links such as gapira.ir/title</string>
     <string name="GroupDescription4">Admins with different rights</string>
     <string name="ChatYourSelfDescription1">Forward messages here to save them</string>
     <string name="ChatYourSelfDescription2">Send media and files to store them</string>
@@ -2695,7 +2695,7 @@
     <string name="TelegramFAQ">Telegram FAQ</string>
     <string name="TelegramFaq">Telegram FAQ</string>
     <string name="TelegramFeatures">Telegram Features</string>
-    <string name="TelegramFeaturesUrl">https://t.me/TelegramTips</string>
+    <string name="TelegramFeaturesUrl">https://gapira.ir/TelegramTips</string>
     <string name="AddAccount">Add Account</string>
     <string name="SwitchAccountHint">"Long tap to switch accounts"</string>
     <string name="SelectAccount">Select Account</string>
@@ -6042,7 +6042,7 @@
     <string name="PinChatsLimitTitle">Pinned Chats</string>
     <string name="PinChatsLimitSubtitle">Pin up to %d chats in your main chat list</string>
     <string name="PublicLinksLimitTitle">Public Links</string>
-    <string name="PublicLinksLimitSubtitle">Reserve up to %d t.me/name links</string>
+    <string name="PublicLinksLimitSubtitle">Reserve up to %d gapira.ir/name links</string>
     <string name="SavedGifsLimitTitle">Saved GIFs</string>
     <string name="SavedGifsLimitSubtitle">Save up to %d GIFs in your Favorite GIFs</string>
     <string name="FavoriteStickersLimitTitle">Favorite Stickers</string>
@@ -10932,14 +10932,14 @@
     <string name="CocoonSubtitle">Cocoon (**Co**nfidential **Co**mpute **O**pen **N**etwork)\nhandles AI tasks safely and efficiently.</string>
     <string name="CocoonFeature1Title">Private</string>
     <string name="CocoonFeature1Text">No third party can access any data, such as translations, inside **@cocoon**</string>
-    <string name="CocoonFeature1TextLink">https://t.me/cocoon</string>
+    <string name="CocoonFeature1TextLink">https://gapira.ir/cocoon</string>
     <string name="CocoonFeature2Title">Efficient</string>
     <string name="CocoonFeature2Text">Cocoon has allowed Telegram to reduce translation cost by 6x.</string>
     <string name="CocoonFeature3Title">For Everyone</string>
     <string name="CocoonFeature3Text">Any developer can use Cocoon for AI features. Learn more at **cocoon.org**</string>
     <string name="CocoonFeature3TextLink">https://cocoon.org/</string>
-    <string name="CocoonFooter">Want to integrate Cocoon into your projects?\nReach out at **t.me/cocoon?direct**</string>
-    <string name="CocoonFooterLink">https://t.me/cocoon?direct</string>
+    <string name="CocoonFooter">Want to integrate Cocoon into your projects?\nReach out at **gapira.ir/cocoon?direct**</string>
+    <string name="CocoonFooterLink">https://gapira.ir/cocoon?direct</string>
     <string name="SummaryTitle">AI Summary</string>
     <string name="SummarySubtitle">Tap to see original text</string>
     <string name="SummaryLimit">Summarize large messages with AI — unlimited in Telegram Premium.</string>
