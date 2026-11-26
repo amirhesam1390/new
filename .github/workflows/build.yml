@@ -135,6 +135,33 @@ jobs:
           df -h
           free -h
 
+      - name: Prepare Signing Keystore (CI only, not committed)
+        run: |
+          set -euo pipefail
+          # Log: packageAfatDebug FAILED - KeytoolException: Failed to read key androidkey from store
+          # TMessagesProj/config/release.keystore: "Keystore was tampered with, or password was incorrect".
+          # The debug signingConfig reads this keystore with RELEASE_* values from gradle.properties.
+          KS="TMessagesProj/config/release.keystore"
+          STORE_PW="$(sed -n 's/^RELEASE_STORE_PASSWORD=//p' gradle.properties | head -n 1)"
+          KEY_PW="$(sed -n 's/^RELEASE_KEY_PASSWORD=//p' gradle.properties | head -n 1)"
+          KEY_ALIAS="$(sed -n 's/^RELEASE_KEY_ALIAS=//p' gradle.properties | head -n 1)"
+          test -n "$STORE_PW" && test -n "$KEY_PW" && test -n "$KEY_ALIAS"
+
+          if [ -f "$KS" ] && keytool -list -keystore "$KS" -storepass "$STORE_PW" -alias "$KEY_ALIAS" >/dev/null 2>&1; then
+            echo "Repository keystore matches gradle.properties - using it unchanged."
+          else
+            echo "Repository keystore cannot be opened with gradle.properties credentials."
+            echo "Generating a temporary CI keystore in the runner workspace (the repository is not modified)."
+            rm -f "$KS"
+            keytool -genkeypair -noprompt \
+              -keystore "$KS" -storetype PKCS12 \
+              -alias "$KEY_ALIAS" -keyalg RSA -keysize 2048 -validity 10000 \
+              -storepass "$STORE_PW" -keypass "$KEY_PW" \
+              -dname "CN=Gapira Classic CI, O=Gapira, C=IR"
+            keytool -list -keystore "$KS" -storepass "$STORE_PW" -alias "$KEY_ALIAS" >/dev/null
+            echo "Temporary CI keystore created and verified."
+          fi
+
       - name: Build Gapira Classic APK
         run: |
           ./gradlew \
