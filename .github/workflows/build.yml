@@ -80,6 +80,19 @@ jobs:
             i686-linux-android x86_64-linux-android
           rustup target list --toolchain stable --installed
 
+          # build_wallet_engine.sh runs inside TMessagesProj/jni/gram-wallet, whose rust-toolchain.toml pins the
+          # Rust version (log: "missing active toolchain 1.96.1 ... auto-installed" -> no Android targets -> exit 1).
+          # Install that exact toolchain WITH the ARM targets, reading the version from the repo so it stays in sync.
+          RUST_TOOLCHAIN_FILE="TMessagesProj/jni/gram-wallet/rust-toolchain.toml"
+          test -f "$RUST_TOOLCHAIN_FILE"
+          RUST_PIN="$(sed -n 's/^channel *= *"\(.*\)".*/\1/p' "$RUST_TOOLCHAIN_FILE" | head -n 1)"
+          test -n "$RUST_PIN"
+          echo "Pinned Rust toolchain: $RUST_PIN"
+          rustup toolchain install "$RUST_PIN" --profile minimal \
+            --component rustfmt --component clippy \
+            --target armv7-linux-androideabi --target aarch64-linux-android
+          (cd TMessagesProj/jni/gram-wallet && rustc --version && rustup target list --installed)
+
       - name: Verify Project
         run: |
           set -e
