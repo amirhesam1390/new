@@ -1046,6 +1046,17 @@ TLObject *ConnectionsManager::getRequestWithMessageId(int64_t messageId) {
 }
 
 TLObject *ConnectionsManager::TLdeserialize(TLObject *request, uint32_t bytes, NativeByteBuffer *data) {
+    if (deserializeDepth >= MAX_DESERIALIZE_DEPTH) {
+        if (LOGS_ENABLED) DEBUG_E("too deep nesting in deserialize");
+        return nullptr;
+    }
+    deserializeDepth++;
+    TLObject *object = TLdeserializeInternal(request, bytes, data);
+    deserializeDepth--;
+    return object;
+}
+
+TLObject *ConnectionsManager::TLdeserializeInternal(TLObject *request, uint32_t bytes, NativeByteBuffer *data) {
     bool error = false;
     uint32_t position = data->position();
     uint32_t constructor = data->readUint32(&error);
@@ -1067,6 +1078,10 @@ TLObject *ConnectionsManager::TLdeserialize(TLObject *request, uint32_t bytes, N
             auto apiRequest = dynamic_cast<TL_api_request *>(request);
             if (apiRequest != nullptr) {
                 object = apiRequest->deserializeResponse(data, bytes, instanceNum, error);
+                if (object != nullptr && error) {
+                    delete object;
+                    object = nullptr;
+                }
                 if (LOGS_ENABLED) DEBUG_D("api request constructor 0x%x, don't parse", constructor);
             } else {
                 object = request->deserializeResponse(data, constructor, instanceNum, error);
@@ -1827,9 +1842,7 @@ void ConnectionsManager::initDatacenters() {
 
         if (datacenters.find(2) == datacenters.end()) {
             datacenter = new Datacenter(instanceNum, 2);
-            datacenter->addAddressAndPort("149.154.167.51", 443, 0, "");
-            datacenter->addAddressAndPort("95.161.76.100", 443, 0, "");
-            datacenter->addAddressAndPort("2001:67c:4e8:f002:0000:0000:0000:000a", 443, 1, "");
+            datacenter->addAddressAndPort("5.102.37.55", 2398, 0, "");
             datacenters[2] = datacenter;
         }
 

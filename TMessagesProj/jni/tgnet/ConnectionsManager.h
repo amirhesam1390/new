@@ -132,6 +132,7 @@ private:
     void attachConnection(ConnectionSocket *connection);
     void detachConnection(ConnectionSocket *connection);
     TLObject *TLdeserialize(TLObject *request, uint32_t bytes, NativeByteBuffer *data);
+    TLObject *TLdeserializeInternal(TLObject *request, uint32_t bytes, NativeByteBuffer *data);
     TLObject *getRequestWithMessageId(int64_t messageId);
     void onDatacenterHandshakeComplete(Datacenter *datacenter, HandshakeType type, int32_t timeDiff);
     void onDatacenterExportAuthorizationComplete(Datacenter *datacenter);
@@ -143,6 +144,7 @@ private:
     void checkProxyInternal(ProxyCheckInfo *proxyCheckInfo);
 
     int32_t instanceNum = 0;
+    uint32_t deserializeDepth = 0;
     uint32_t configVersion = 5;
     Config *config = nullptr;
 
