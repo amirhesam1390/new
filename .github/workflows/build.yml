@@ -68,7 +68,7 @@ jobs:
           test -f gradlew
           test -f settings.gradle
           test -f TMessagesProj/build.gradle
-          test -f TMessagesProj_AppStandalone/build.gradle
+          test -f TMessagesProj_App/build.gradle
           test -f TMessagesProj_Modules/media/core_settings.gradle
           echo "Gapira Classic source verification passed."
           git submodule status --recursive
@@ -106,7 +106,7 @@ jobs:
       - name: Build Gapira Classic APK
         run: |
           ./gradlew \
-            :TMessagesProj_AppStandalone:assembleAfatDebug \
+            :TMessagesProj_App:assembleAfatDebug \
             --no-daemon \
             --stacktrace \
             --max-workers=2 \
