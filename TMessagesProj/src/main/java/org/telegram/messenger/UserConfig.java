@@ -64,7 +64,7 @@ public class UserConfig extends BaseController {
     public boolean syncContacts = false;
     public boolean suggestContacts = true;
     public boolean showCallsTab;
-    public boolean mainTabsHiddenFork = true;
+    public boolean mainTabsHiddenFork = false;
     // [classic] guard for the one-time "hide the bottom tabs" migration in loadConfig(). It lives in
     // this per-account prefs file, which clearConfig() wipes wholesale, so clearConfig() has to carry
     // it across -- see the comment there.
@@ -336,11 +336,11 @@ public class UserConfig extends BaseController {
             loginTime = preferences.getInt("loginTime", currentAccount);
             syncContacts = preferences.getBoolean("syncContacts", false);
             showCallsTab = preferences.getBoolean("showCallsTab", false);
-            mainTabsHiddenFork = preferences.getBoolean("mainTabsHiddenFork", true);
+            mainTabsHiddenFork = preferences.getBoolean("mainTabsHiddenFork", false);
             if (!preferences.getBoolean(CLASSIC_MAIN_TABS_MIGRATED, false)) {
-                mainTabsHiddenFork = true;
+                mainTabsHiddenFork = false;
                 preferences.edit()
-                        .putBoolean("mainTabsHiddenFork", true)
+                        .putBoolean("mainTabsHiddenFork", false)
                         .putBoolean(CLASSIC_MAIN_TABS_MIGRATED, true)
                         .apply();
             }
@@ -527,7 +527,7 @@ public class UserConfig extends BaseController {
         contactsReimported = true;
         syncContacts = false;
         showCallsTab = false;
-        mainTabsHiddenFork = true;
+        mainTabsHiddenFork = false;
         suggestContacts = true;
         unreadDialogsLoaded = true;
         hasValidDialogLoadIds = true;
